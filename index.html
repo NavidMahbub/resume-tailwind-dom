@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/3a497cf9d7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>My Resume</title>
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex flex-wrap justify-between bg-white w-full mx-auto pr-4 md:pr-0 md:flex-nowrap lg:w-2/3">
+
+        <div class="bg-blue-600 w-10">
+            <!-- vertical Bar -->
+        </div>
+
+        <div class="w-10/12 pb-10 md:pt-10 md:w-2/4 md:pl-8">
+            <img class="w-32 mt-3 mx-auto border-8 border-gray-100" src="img/mahbub.jpeg " alt="mahbub-pic">
+            <h1 class="text-blue-600 text-4xl font-bold text-center">MAHBUB ALAM</h1>
+            <p class="text-md text-center mb-8">Junior Software Engineer</p>
+
+            <div
+                class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-6 mb-5 border-t-2 border-blue-600 border-b-2">
+                Personal Profile
+            </div>
+
+            <p class="text-sm">
+                I'm a programmer with robust problem-
+                solving skills and proven experience in
+                creating and designing software in a test-
+                driven environment.I'm a quick learner and
+                minimalist who have interests in Problem
+                Solving,Algorithm,Data Structure,OOP,Web
+                and Love to learn something new.
+            </p>
+
+            <div
+                class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-6 mb-5 border-t-2 border-blue-600 border-b-2">
+                Technical Skills
+            </div>
+
+            <div class="text-sm list-none">
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>Problem Solving</li>
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>C/C++, Java</li>
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>VueJS, Laravel, Android</li>
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>MySQL, SQL Server</li>
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>Linux Operating System</li>
+                <li><i class="text-blue-600 pr-3 fas fa-star"></i>Thesis on Blockchain & IoT</li>
+            </div>
+
+
+            <div
+                class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-6 mb-5 border-t-2 border-blue-600 border-b-2">
+                Reach Me At
+            </div>
+
+
+            <div id='weather' class="hidden border-2 w-full mt-5 text-center py-1 mb-5 rounded border-blue-600">
+                <div class="font-bold text-blue-600"> <i class="fas fa-smog mr-3"></i> Weather in Dhaka</div>
+                <div class="text-sm" id='temparature'>Temparature: 50 *c </div>
+                <div class="text-sm" id='feel_like'>Feel Like: 15</div>
+                <div class="text-sm" id='humidity'> Humadity: 15 m/h</div>
+                <div class="text-sm" id='wind'> Wind: 15 m/h</div>
+            </div>
+
+
+            <div class="flex justify-between">
+                <div class="text-sm list-none">
+                    <li> <i class="text-blue-600 pr-3 fas fa-mobile-alt"></i> +880 1845-396079</li>
+                    <li> <i class="text-blue-600 pr-3 fab fa-linkedin-in"></i> <a
+                            href="http://linkedin.com/in/mahbub-042">LinkedIn</a></li>
+                    <li> <i class="text-blue-600 pr-3 fab fa-github"></i> <a
+                            href="http://github.com/NavidMahbub">Github</a>
+                    </li>
+                    <li> <i class="text-blue-600 pr-3 fas fa-envelope"></i> <a
+                            href="mailto: navidmahbub27@gmail.com">Send
+                            Email</a></li>
+                    <li onclick="getWeather()"> <i class="text-blue-600 pr-3 fas fa-map-marker-alt"></i> Banani, Dhaka,
+                        Bangladesh</li>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="w-10/12 pb-10 ml-16 md:pr-4 lg:pl-8 md:pt-10 md:w-2/4 ">
+            <div
+                class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-5 mb-5 border-t-2 border-blue-600 border-b-2">
+                ACADEMIC HISTORY
+            </div>
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Mawlana Bhashani Science and Technology
+                    University
+                    <!-- <span class="font-light">(2016 - Present)</span> -->
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_mbstu"
+                        onclick="hideAndShowDetails('#mbstu','#icon_mbstu')"></i>
+                </div>
+
+                <div>
+                    <div class="text-sm">
+                        B.Sc in Computer Science and Engineering
+                    </div>
+                    <div id="mbstu" class="hidden text-sm">
+                        <li>CGPA: 3.52 / 4.00</li>
+                        <li>Participated in IDPC MBSTU</li>
+                        <li>Member:Competitive programming Community</li>
+                        <li>Participant & Organized "CSE Carnival'17 "</li>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-3">
+                <div class="font-bold mt-3 flex justify-between">
+                    Dr. Khandaker Mosharraf Hossain College
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_clg"
+                        onclick="hideAndShowDetails('#college','#icon_clg')"></i>
+                </div>
+                <div>
+                    <div class="text-sm">
+                        Science Student ( 2012 - 2014 )
+                    </div>
+                    <div id="college" class="hidden text-sm">
+                        <li>HSC GPA: 5.00 / 5.00</li>
+                        <li>Placed 1st in 2nd Semester Exam</li>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Porachak Bausia High School
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_school"
+                        onclick="hideAndShowDetails('#school','#icon_school')"></i>
+                </div>
+                <div>
+                    <div class="text-sm">
+                        Science Student ( 2007 - 2011 )
+                    </div>
+                    <div id="school" class="hidden text-sm">
+                        <li>SSC GPA: 5.00 / 5.00</li>
+                        <li>Junior scholarship in class 8.</li>
+                    </div>
+                </div>
+            </div>
+
+
+            <div
+                class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-6 mb-5 border-t-2 border-blue-600 border-b-2">
+                CAREER EXPERIENCE
+            </div>
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Dynamic Solution Innovators.
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_dsi"
+                        onclick="hideAndShowDetails('#dsi','#icon_dsi')"></i>
+                </div>
+
+                <div>
+                    <div class="text-sm">
+                        Junior Software Engineer
+                    </div>
+                    <div id="dsi" class="hidden text-sm">
+                        <li>Working remotely from home.</li>
+                        <li>(Aug 2021 - present)</li>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Bemantech Ltd.
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_intern"
+                        onclick="hideAndShowDetails('#intern','#icon_intern')"></i>
+                </div>
+
+                <div>
+                    <div class="text-sm">
+                        Software Engineer [Remote]
+                    </div>
+                    <div id="intern" class="hidden text-sm">
+                        <li>Worked remotely in a team of 3 members.</li>
+                        <li>Developed 6+ projects using VueJS, Laravel.</li>
+                        <li>(Sep 2019 - Mar 2020)</li>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="mt-4">
+                <div
+                    class="uppercase font-bold text-blue-600 tracking-widest text-sm mt-6 mb-5 border-t-2 border-blue-600 border-b-2">
+                    PROJECTS
+                </div>
+                <div class="font-bold mt-3 flex justify-between">
+                    Cloud‑Messaging
+                    <i class=" text-blue-600 fas fa-chevron-down" id="icon_cloud"
+                        onclick="hideAndShowDetails('#cloud','#icon_cloud')"></i>
+                </div>
+                <div id="cloud" class="hidden text-sm">
+                    <li>A message app for a company named RubelGroup.</li>
+                    <li>Used Vuejs and Laravel</li>
+                    <li> <a href="https://www.github.com/NavidMahbub/Cloud-Messaging.git">Project Github link</a></li>
+                </div>
+            </div>
+
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Bemantech Website
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_web"
+                        onclick="hideAndShowDetails('#website','#icon_web')"></i>
+                </div>
+                <div id="website" class="hidden text-sm">
+                    <li>A website for Bemantech Ltd.</li>
+                    <li>Used Vuejs & Laravel</li>
+                    <li> <a href="https://www.github.com/NavidMahbub/BemanTech.git">Project Github link</a></li>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="font-bold flex justify-between">
+                    Banglapress
+                    <i class="mt-1 text-blue-600 fas fa-chevron-down" id="icon_press"
+                        onclick="hideAndShowDetails('#banglapress','#icon_press')"></i>
+                </div>
+                <div id="banglapress" class="hidden text-sm">
+                    <li>A online news portal and a CMS System</li>
+                    <li>Used Laravel and VueJs</li>
+                    <li> <a href="https://github.com/NavidMahbub/Banglapress">Project Github link</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
